@@ -1,0 +1,273 @@
+/* ثوابت */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    }
+
+    /* container */
+    /* Small */
+    /* @media (max-width:768) {
+        .container{
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto; 
+            
+        }
+        
+    } */
+    @media (min-width: 768px) {
+        .container {
+          width: 750px;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-left: auto;
+          margin-right: auto; 
+        }
+      
+      }
+
+body{
+    background-color: #266e73;
+    filter: blur(f);
+}
+
+.maincontainer{
+
+    height: max-content;
+    max-width: 70%;
+    position: relative;
+    left: 15%;
+    right: 15%;
+    border-radius: 5%;
+    z-index: 9999;
+
+}
+.logo{
+    height: max-content;
+    background-color: #cfe5ec6c;
+    border-radius: 5%;
+    
+}
+.maincontainer img{
+    width: 39%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 99999;
+    margin-left: 15%;
+    left: 62px;
+    top: 39px;
+    
+    border: 20px rgba(206, 206, 206, 0.204) solid;
+    
+}
+.logo .p1 {
+    position: relative;
+    color: aliceblue;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 70px;
+    text-shadow: 3px 3px 7px rgb(195, 206, 209);
+    font-family: 'Libre Baskerville', serif;
+    opacity: 0;
+    transform: translateY(-20px);
+    padding-bottom: 50px;
+}
+
+.logo .p1.fadeInUp {
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.logo .p2{
+color: azure;
+margin-top: 10px;
+margin-left: 20px;
+font-family: 'Cairo', sans-serif;
+}
+
+/* Reset styles */
+.icon-bar {
+    display: flex; /* عرض الأيقونات بشكل متوازي */
+    align-items: center; /* محاذاة الأيقونات عمودياً في الوسط */
+}
+
+.icon-bar a {
+    margin-top: 15px;
+    /* تعديل الحجم والمسافة بين الأيقونات والحدود */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff; /* تغيير لون الأيقونة إلى أبيض */
+    text-decoration: none;
+    /* تغيير خلفية الأيقونة */
+    background-color: #a4c5c266;
+    /* إضافة تأثير حدود مستديرة للخلفية */
+    border-radius: 50%;
+    position: relative;
+    left: 25%;
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 15px; /* توسيط المسافة بين الأيقونات */
+    transition: 5s;
+    
+}
+
+/* تحسين المظهر عند تمرير المؤشر فوق الأيقونات */
+.icon-bar a:hover {
+    background-color: #cfe5ec6c; /* تغيير لون الخلفية عند التمرير */
+
+    margin-top: 0px;
+    height: 55px;
+    border-radius: 0;
+}
+
+/* نفس الكود السابق */
+
+/* إخفاء الأيقونات بداية */
+.hidden {
+    opacity: 0;
+}
+
+
+.contact-rectangle {
+    background-color: #cfe5ec6c;
+    border-radius: 10px;
+max-width: ;
+    transition: transform 0.3s ease-in-out; 
+    z-index: 9999999;
+    height: max-content;
+    max-width: 70%;
+    position: relative;
+    left: 15%;
+    right: 15%;
+    border-radius: 5%;
+    z-index: 9999;
+    padding: 5%;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    z-index: 9999999;
+}
+
+.contact-item h2 {
+    margin: 0;
+    color: #333;
+}
+
+.contact-item p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* ثوابت وأساسيات هنا */
+
+/* تحسين مظهر الصورة والعنوان */
+.img-container {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.img-logo:hover {
+    transform: translateX(-10px) scale(0.95);
+}
+.img-logo:hover .img-overlay {
+    opacity: 1;
+    transform: translateX(-15px) scale(1);
+}
+.img-container:hover .img-overlay {
+    opacity: 1;
+    transform: translateX(-15px) scale(1);
+}
+
+.dr-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* باقي الستايلات هنا */
+
+
+.main-box {
+    width: 90px;
+    height: 45px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: width 0.3s;
+    position: fixed;
+    left: 0;
+    bottom: 4%;
+  }
+
+  .child-box {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #ccc;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .main-box.expanded {
+    width: 285px;
+  }
+  
+  .main-box.expanded .child-box {
+    display: flex;
+    background: #c0bdbd63;
+    width: 90px;
+    height: 45px;
+  }
+  
+  .child-box i {
+    color: #333;
+  }
+  
+  .child-box.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .child-box:hover i,
+.child-box.active i {
+  color: #007bff;
+}

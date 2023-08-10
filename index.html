@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/css.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="/normalize/normailze.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div class="maincontainer">
+            <div class="logo">
+                <div class="img-container">
+                <img  class="img-logo" src="/img/307911849_450969380356399_6467244757453329435_n.jpg" alt="">
+                <div class="img-overlay">
+                    <p class="dr-name">Dr. Philip</p>
+                </div> </div>
+                <p class="p1">Centre Dentaire Rosemeire</p>
+            </div>
+
+            <div class="icon-contacts">
+                <div class="icon-bar">
+                    <a  href="tel:123456789"  class="phone-icon hidden"><i class="fas fa-phone-alt"></i> </a>
+                    <a href="tel:123456789"><i class="fas fa-phone-alt"></i> </a>
+                    <a href="https://www.facebook.com" target="_blank" class="facebook-icon hidden"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.google.com" target="_blank" class="location-icon hidden"><i class="fas fa-map-marker-alt"></i></a>
+                </div>
+            </div> 
+        </div>
+        
+        <div class="contact-rectangle">
+            <div class="contact-item">
+                <h2>Phone number :</h2>
+                <p>123-456-789</p>
+            </div>
+            <div class="contact-item">
+                <h2>Another phone number</h2>
+                <p>987-654-321</p>
+            </div>
+            <div class="contact-item">
+                <h2>Email</h2>
+                <p>example@example.com</p>
+            </div>
+            <div class="contact-item">
+                <h2>Facebook</h2>
+                <p><a href="#">facebook.com/example</a></p>
+            </div>
+            <div class="contact-item">
+                <h2>Location</h2>
+                <p><a href="#">Location</a></p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="main-box" onclick="toggleExpand()">
+        <i class="fas fa-plus"></i>
+        <div class="child-box" onclick="openLink('https://www.google.com')"><i class="fas fa-phone-alt"></i></div>
+        <div class="child-box" onclick="openLink('https://www.google.com')"><i class="fas fa-qrcode"></i></div>
+        <div class="child-box" onclick="openLink('https://www.google.com')"><i class="fas fa-download"></i></div>
+      </div>
+      </div>
+
+
+
+</body>
+<script>
+    // تأكد من تنفيذ السكريبت بعد تحميل المحتوى
+document.addEventListener("DOMContentLoaded", function() {
+    const p1Element = document.querySelector('.logo .p1');
+    
+    // قم بإضافة الفئة 'fadeInUp' إلى النص لتطبيق التأثير
+    p1Element.classList.add('fadeInUp');
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const icons = document.querySelectorAll('.icon-bar a');
+
+    // تأخير لبدء تحميل الأيقونات كمخفية
+    setTimeout(() => {
+        icons.forEach(icon => {
+            icon.classList.remove('hidden');
+        });
+
+        // تحريك الأيقونات بحركة بسيطة
+        icons.forEach(icon => {
+            icon.style.transition = 'transform 0.5s ease-in-out';
+            icon.style.transform = 'translateY(-20px)';
+        });
+
+        // تأخير لتحقيق التوقيت المناسب للحركة
+        setTimeout(() => {
+            icons.forEach(icon => {
+                icon.style.transform = 'translateY(0)';
+            });
+        }, 500); // بعد 500 مللي ثانية (نفس مدة الانتقال)
+    }, 500); // بعد 500 مللي ثانية (تأخير بدء ظهور الأيقونات)
+});
+
+
+function toggleExpand() {
+  var mainBox = document.querySelector('.main-box');
+  mainBox.classList.toggle('expanded');
+}
+
+function openLink(url) {
+  window.open(url, '_blank', 'width=600,height=400');
+}
+
+function toggleActive(element) {
+  element.classList.toggle('active');
+}
+
+</script>
+</html>
