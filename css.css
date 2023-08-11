@@ -315,12 +315,15 @@ body{
   }
 
   #section1{
-    margin-top: 20px;
+    margin-top: 25px;
     height: 100vh;
+    width: 100%;
+
   }
   #section2{
     margin-top: 20px;
 height: 100vh;
+
   }
 
 
