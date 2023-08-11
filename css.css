@@ -31,8 +31,12 @@
       
       }
 
+
+
+
+      
 body{
-    background-color: #d7e6e7;
+  background-color: #0e4254;
     filter: blur(f);
 }
 
@@ -153,6 +157,8 @@ body{
     z-index: 9999;
     margin-top: -1px;
     padding: 5%;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .contact-item {
@@ -162,17 +168,17 @@ body{
 
 .contact-item h2 {
     margin: 0;
-    color: #eaeaea;
+    color: #bbf4ff;
 }
 
 .contact-item p {
     margin: 5px 0 0;
-    color: #a3a3a3;
+    color: #ffffff;
 }
 
 .contact-item a {
     text-decoration: none;
-    color: #007bff;
+    color: #ffffff;
 }
 
 /* ثوابت وأساسيات هنا */
@@ -222,7 +228,7 @@ body{
 .main-box {
     width: 60px;
     height: 45px;
-    border: 1px solid #0c9fd9;
+    border: 1px solid #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,12 +270,12 @@ body{
   
   .child-box.active {
     background: #d5d6d663;
-    color: #fff;
+    color: #ffffff;
   }
 
   .child-box:hover i,
 .child-box.active i {
-  color: #124081;
+  color: #1991d7;
 }
 
 .plusfull{
@@ -286,7 +292,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #d7e6e7;
+    background-color: #d7e6e700;
     display: flex;
     justify-content: center;
     align-items: center;
