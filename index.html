@@ -1,124 +1,376 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="/normalize/normailze.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
+/* ثوابت */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    }
 
-        <div class="maincontainer">
-            <div class="logo">
-                <div class="img-container">
-                <img  class="img-logo" src="307911849_450969380356399_6467244757453329435_n.jpg" alt="">
-                <div class="img-overlay">
-                    <p class="dr-name">Dr. Philip</p>
-                </div> </div>
-                <p class="p1">Centre Dentaire Rosemeire</p>
-            </div>
-
-            <div class="icon-contacts">
-                <div class="icon-bar">
-                    <a  href="tel:123456789"  class="phone-icon hidden"><i class="fas fa-phone-alt"></i> </a>
-                    <a href="tel:123456789"><i class="fas fa-phone-alt"></i> </a>
-                    <a href="https://www.facebook.com" target="_blank" class="facebook-icon hidden"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.google.com" target="_blank" class="location-icon hidden"><i class="fas fa-map-marker-alt"></i></a>
-                </div>
-            </div> 
-        </div>
+    /* container */
+    /* Small */
+    /* @media (max-width:768) {
+        .container{
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto; 
+            
+        }
         
-        <div class="contact-rectangle">
-            <div class="contact-item">
-                <h2>Phone number :</h2>
-                <p>123-456-789</p>
-            </div>
-            <div class="contact-item">
-                <h2>Another phone number</h2>
-                <p>987-654-321</p>
-            </div>
-            <div class="contact-item">
-                <h2>Email</h2>
-                <p>example@example.com</p>
-            </div>
-            <div class="contact-item">
-                <h2>Facebook</h2>
-                <p><a href="#">facebook.com/example</a></p>
-            </div>
-            <div class="contact-item">
-                <h2>Location</h2>
-                <p><a href="#">Location</a></p>
-            </div>
-        </div>
+    } */
+    @media (min-width: 768px) {
+        .container {
+          width: 750px;
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-left: auto;
+          margin-right: auto; 
+        }
+      
+      }
 
+body{
+    background-color: #d7e6e7;
+    filter: blur(f);
+}
 
+.maincontainer{
 
+    height: max-content;
+    max-width: 70%;
+    position: relative;
+    left: 15%;
+    right: 15%;
+    border-radius: 5%;
+    z-index: 9999;
 
-    </div>
-
-
-    <div class="main-box" onclick="toggleExpand()">
-        <i class="fas fa-plus"></i>
-        <div class="child-box" onclick="openLink('https://www.google.com')"><i class="fas fa-phone-alt"></i></div>
-        <div class="child-box" onclick="openLink('https://www.google.com')"><i class="fas fa-qrcode"></i></div>
-        <div class="child-box" onclick="openLink('https://www.google.com')"><i class="fas fa-download"></i></div>
-      </div>
-      </div>
-
-
-
-</body>
-<script>
-    // تأكد من تنفيذ السكريبت بعد تحميل المحتوى
-document.addEventListener("DOMContentLoaded", function() {
-    const p1Element = document.querySelector('.logo .p1');
+}
+.logo{
+    height: max-content;
+    background-color: #0d75b6;
+    border-radius: 5%;
     
-    // قم بإضافة الفئة 'fadeInUp' إلى النص لتطبيق التأثير
-    p1Element.classList.add('fadeInUp');
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const icons = document.querySelectorAll('.icon-bar a');
-
-    // تأخير لبدء تحميل الأيقونات كمخفية
-    setTimeout(() => {
-        icons.forEach(icon => {
-            icon.classList.remove('hidden');
-        });
-
-        // تحريك الأيقونات بحركة بسيطة
-        icons.forEach(icon => {
-            icon.style.transition = 'transform 0.5s ease-in-out';
-            icon.style.transform = 'translateY(-20px)';
-        });
-
-        // تأخير لتحقيق التوقيت المناسب للحركة
-        setTimeout(() => {
-            icons.forEach(icon => {
-                icon.style.transform = 'translateY(0)';
-            });
-        }, 500); // بعد 500 مللي ثانية (نفس مدة الانتقال)
-    }, 500); // بعد 500 مللي ثانية (تأخير بدء ظهور الأيقونات)
-});
-
-
-function toggleExpand() {
-  var mainBox = document.querySelector('.main-box');
-  mainBox.classList.toggle('expanded');
+}
+.maincontainer img{
+    width: 39%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 99999;
+    margin-left: 15%;
+    left: 62px;
+    top: 39px;
+    border: 20px rgb(104 185 255 / 36%) solid;
+    
+}
+.logo .p1 {
+    position: relative;
+    color: #f9f9f9;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 70px;
+    text-shadow: 3px 3px 7px rgb(195, 206, 209);
+    font-family: 'Libre Baskerville', serif;
+    opacity: 0;
+    transform: translateY(-20px);
+    padding-bottom: 30px;
 }
 
-function openLink(url) {
-  window.open(url, '_blank', 'width=600,height=400');
+.logo .p1.fadeInUp {
+    animation: fadeInUp 1s ease-out 0.5s forwards;
 }
 
-function toggleActive(element) {
-  element.classList.toggle('active');
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-</script>
-</html>
+
+
+
+
+/* Reset styles */
+.icon-bar {
+    display: flex; /* عرض الأيقونات بشكل متوازي */
+    align-items: center; /* محاذاة الأيقونات عمودياً في الوسط */
+}
+
+.icon-bar a {
+    margin-top: 5px;
+    margin-bottom: 1px;
+    /* تعديل الحجم والمسافة بين الأيقونات والحدود */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    /* تغيير خلفية الأيقونة */
+    background-color: #0d75b6;
+    /* إضافة تأثير حدود مستديرة للخلفية */
+    border-radius: 50%;
+    position: relative;
+    left: 25%;
+    transition: background-color 0.3s ease-in-out;
+    margin-right: 15px; /* توسيط المسافة بين الأيقونات */
+    transition: 5s;
+    
+}
+
+/* تحسين المظهر عند تمرير المؤشر فوق الأيقونات */
+.icon-bar a:hover {
+    background-color: #0d75b6;
+    
+    margin-top: 0px;
+    height: 45px;
+    border-radius: 0;
+}
+
+/* نفس الكود السابق */
+
+/* إخفاء الأيقونات بداية */
+.hidden {
+    opacity: 0;
+}
+
+
+.contact-rectangle {
+    background-color: #0d75b6;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; 
+    z-index: 9999999;
+    height: max-content;
+    max-width: 70%;
+    position: relative;
+    left: 15%;
+    right: 15%;
+    border-radius: 5%;
+    z-index: 9999;
+    margin-top: -1px;
+    padding: 5%;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    z-index: 9999999;
+}
+
+.contact-item h2 {
+    margin: 0;
+    color: #eaeaea;
+}
+
+.contact-item p {
+    margin: 5px 0 0;
+    color: #a3a3a3;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* ثوابت وأساسيات هنا */
+
+/* تحسين مظهر الصورة والعنوان */
+.img-container {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    
+
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.img-logo:hover {
+    transform: translateX(-10px) scale(0.95);
+}
+.img-logo:hover .img-overlay {
+    opacity: 1;
+    transform: translateX(-15px) scale(1);
+}
+.img-container:hover .img-overlay {
+    opacity: 1;
+    transform: translateX(-15px) scale(1);
+}
+
+.dr-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* باقي الستايلات هنا */
+
+
+.main-box {
+    width: 60px;
+    height: 45px;
+    border: 1px solid #0c9fd9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: width 0.3s;
+    position: fixed;
+    left: 0;
+    bottom: 4%;
+    z-index: 99999999;
+  }
+
+  .child-box {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #ccc;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 9999999999;
+
+  }
+  
+  .main-box.expanded {
+    width: 285px;
+  }
+  
+  .main-box.expanded .child-box {
+    display: flex;
+    background: #14679063;
+    width: 90px;
+    height: 45px;
+  }
+  
+  .child-box i {
+    color: #fff;
+  }
+  
+  .child-box.active {
+    background: #d5d6d663;
+    color: #fff;
+  }
+
+  .child-box:hover i,
+.child-box.active i {
+  color: #124081;
+}
+
+.plusfull{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  /* اضائة الاسم */
+
+
+
+
+  .section-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d7e6e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13px;
+    font-size: 15px;
+  }
+  
+  .section-link {
+    padding: 2px 41px;
+    cursor: pointer;
+    color: rgba(161, 155, 155, 0.656);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  
+  .active-link {
+    color: #0052ff;
+    font-weight: bold;
+    
+  }
+
+  #section1{
+    margin-top: 20px;
+    height: 100vh;
+  }
+  #section2{
+    margin-top: 20px;
+height: 100vh;
+  }
+
+
+  .section-bar:first-child{
+    position: fixed;
+    z-index: 999999999;
+  }
+  .section-bar:last-child{
+    position: fixed;
+  }
+
+  /* section2 */
+
+  .logo .p2 {
+    position: relative;
+    color: #f3f3f3;
+    font-size: 25px;
+    margin-top: 78px;
+    margin-left: 70px;
+    text-shadow: 3px 3px 7px rgb(195, 206, 209);
+    font-family: 'Libre Baskerville', serif;
+    transform: translateY(-20px);
+    padding-bottom: 2px;
+    z-index: 999999999;
+}
+
+.logo .p2.fadeInUp {
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Your existing CSS styles */
+
+/* Additions for animation */
+
+  .animated {
+    animation: moveItems 2s ease-in-out forwards;
+  }
+  
+  @keyframes moveItems {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
