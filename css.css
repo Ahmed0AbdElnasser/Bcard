@@ -346,7 +346,7 @@ body{
     
   #section1{
     
-    height: 100vh;
+    height: 100%;
     width: 100%;
   }
   
@@ -411,3 +411,24 @@ body{
 
 
 
+
+@media (max-width:768px) {
+  .maincontainer{
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .container{
+    width: 100%;
+  }
+.qrc_profilepic{
+  border-radius: 0;
+}
+.maincontainer img {
+  right: 13%;
+}
+.section1{
+  height: 100%;
+}
+}
