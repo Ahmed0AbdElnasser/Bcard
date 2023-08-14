@@ -423,7 +423,7 @@ body{
     width: 100%;
   }
 .qrc_profilepic{
-  border-radius: 0;
+  border-radius: 0%;
 }
 .maincontainer img {
   right: 13%;
