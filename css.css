@@ -32,12 +32,11 @@
       }
 
 
-
-
       
 body{
   background-color: #0e4254;
     filter: blur(f);
+
 }
 
 .maincontainer{
@@ -51,37 +50,38 @@ body{
     z-index: 9999;
 
 }
-.logo{
-    height: max-content;
-    background-color: #0d75b6;
-    border-radius: 5%;
-    
-}
+
 .maincontainer img{
-    width: 39%;
-    border-radius: 50%;
-    position: relative;
-    z-index: 99999;
-    margin-left: 15%;
-    left: 62px;
-    top: 39px;
-    border: 20px rgb(104 185 255 / 36%) solid;
+  width: 36%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 99999;
+  margin-left: 15%;
+  right: 16%;
+  bottom: 78px;
+  border: 16px rgb(104 185 255 / 36%) solid;
+
     
 }
-.logo .p1 {
-    position: relative;
-    color: #f9f9f9;
-    font-size: 25px;
-    margin-top: 50px;
-    margin-left: 70px;
-    text-shadow: 3px 3px 7px rgb(195, 206, 209);
-    font-family: 'Libre Baskerville', serif;
-    opacity: 0;
-    transform: translateY(-20px);
-    padding-bottom: 30px;
+.p12{
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  color: white;
+  font-size: 26px;
+  line-height: 34px;
+  word-break: break-word;
+  font-weight: bold;
+  left: 41%;
+  top: 39%;
+  position: absolute;
+  /* margin-top: 50px; */
+  /* margin-left: 70px; */
+  opacity: 0;
+  transform: translateY(-90px);
+  /* padding-bottom: 30px; */
+  max-width: 59%;
 }
 
-.logo .p1.fadeInUp {
+.p12.fadeInUp {
     animation: fadeInUp 1s ease-out 0.5s forwards;
 }
 
@@ -91,7 +91,12 @@ body{
         transform: translateY(0);
     }
 }
-
+@media (max-width:570px) {
+  .p12{
+    top: 30%;
+  }
+  
+}
 
 
 
@@ -123,9 +128,14 @@ body{
     transition: background-color 0.3s ease-in-out;
     margin-right: 15px; /* توسيط المسافة بين الأيقونات */
     transition: 5s;
-    
-}
 
+}
+@media (max-width:750px) {
+  .icon-bar a{
+    left: 20%;
+  }
+  
+}
 /* تحسين المظهر عند تمرير المؤشر فوق الأيقونات */
 .icon-bar a:hover {
     background-color: #0d75b6;
@@ -149,9 +159,9 @@ body{
     transition: transform 0.3s ease-in-out; 
     z-index: 9999999;
     height: max-content;
-    max-width: 70%;
+    max-width: 97%;
     position: relative;
-    left: 15%;
+    left: 2%;
     right: 15%;
     border-radius: 5%;
     z-index: 9999;
@@ -168,17 +178,17 @@ body{
 
 .contact-item h2 {
     margin: 0;
-    color: #bbf4ff;
+    color: #ffffff;
 }
 
 .contact-item p {
     margin: 5px 0 0;
-    color: #ffffff;
+    color: #d1d0d0;
 }
 
 .contact-item a {
     text-decoration: none;
-    color: #ffffff;
+    color: #d1d0d0;
 }
 
 /* ثوابت وأساسيات هنا */
@@ -194,8 +204,8 @@ body{
 
 .img-overlay {
     position: absolute;
-    top: 0;
-    left: -20px;
+    top: 62%;
+    left: 4%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 5px 10px;
@@ -205,15 +215,15 @@ body{
 }
 
 .img-logo:hover {
-    transform: translateX(-10px) scale(0.95);
+    transform: translateX(10px) scale(0.95);
 }
 .img-logo:hover .img-overlay {
     opacity: 1;
-    transform: translateX(-15px) scale(1);
+    transform: translateX(15px) scale(1);
 }
 .img-container:hover .img-overlay {
     opacity: 1;
-    transform: translateX(-15px) scale(1);
+    transform: translateX(15px) scale(1);
 }
 
 .dr-name {
@@ -250,11 +260,18 @@ body{
     cursor: pointer;
     transition: background-color 0.3s;
     z-index: 9999999999;
+    
 
   }
-  
+  .main-box.expanded .plusfull{
+    transform: rotate(45deg);
+    transition: 0.2s;
+  }
   .main-box.expanded {
     width: 285px;
+    transition: 0.2s;
+    color: red;
+
   }
   
   .main-box.expanded .child-box {
@@ -262,25 +279,31 @@ body{
     background: #14679063;
     width: 90px;
     height: 45px;
+    
   }
   
   .child-box i {
     color: #fff;
+    
   }
   
   .child-box.active {
     background: #d5d6d663;
     color: #ffffff;
+    
   }
 
   .child-box:hover i,
 .child-box.active i {
   color: #1991d7;
+
 }
 
 .plusfull{
     margin-left: 10px;
     margin-right: 10px;
+    
+
 }
   /* اضائة الاسم */
 
@@ -314,17 +337,19 @@ body{
     
   }
 
+  .img img{
+    border-radius: 5%;
+    width: 70%;
+    position: relative;
+    left: 15%;
+    }
+    
   #section1{
-    margin-top: 25px;
+    
     height: 100vh;
     width: 100%;
-
   }
-  #section2{
-    margin-top: 20px;
-height: 100vh;
-
-  }
+  
 
 
   .section-bar:first-child{
@@ -383,3 +408,6 @@ height: 100vh;
     }
   }
   
+
+
+
