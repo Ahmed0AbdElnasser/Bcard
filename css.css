@@ -413,6 +413,13 @@ body{
 
 
 @media (max-width:768px) {
+  
+  .p12{
+    margin-top: 42px;
+    left: 5%;
+    margin-bottom: 20px;
+
+  }
   .maincontainer{
     left: 0%;
     right: 0%;
@@ -422,13 +429,11 @@ body{
   .container{
     width: 100%;
   }
-.qrc_profilepic{
-  border-radius: 0%;
-}
 .maincontainer img {
   right: 13%;
+
+  margin-bottom: 20px;
 }
 .section1{
   height: 100%;
-}
 }
