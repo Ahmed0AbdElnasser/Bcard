@@ -1,5 +1,6 @@
 /* ثوابت */
 *{
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -79,6 +80,7 @@ body{
   transform: translateY(-90px);
   /* padding-bottom: 30px; */
   max-width: 59%;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .p12.fadeInUp {
@@ -410,7 +412,9 @@ body{
   
 
 
-
+  .qrc_profilepic{
+    border-radius: 6%;
+  }
 
 @media (max-width:768px) {
   
@@ -436,4 +440,74 @@ body{
 }
 .section1{
   height: 100%;
+}
+}
+
+.qrc_addtocontact{
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 15px;
+z-index: 999999999;
+  right: 15px;
+  z-index: 9;
+  background:#0e4254;
+  padding: 8px 8px 8px 12px;
+  border-radius: 52px;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border: solid 2px #ffffff20;
+  position: fixed;
+  z-index: 9999999999999999999999;
+}
+.qrc_addtocontact_text{
+  color: #fff;
+    width: 72px;
+    text-align: center;
+    z-index: 9999999999;
+}
+.qrc_addtocontact_circle{
+  background-color: rgb(13, 117, 182);
+  color: rgb(255, 255, 255);
+  width: 42px;
+  height: 42px;
+  border-radius: 42px;
+  margin-left: 15px;
+  font-size: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  z-index: 9999999999;
+}
+
+.qrc_contact_header{
+  display: flex;
+  align-items: center;
+  border-bottom: dashed 1px #ECEDF7;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.qrc_contact_hdr_img{
+  width: 52px;
+  height: 52px;
+  background-size: cover;
+  border-radius: 50px;
+  flex-shrink: 0;
+  font-size: 50px;
+  color: #2b2b2b;
+}
+.qrc_contact_hdr_text{
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 15px;
+  color: white;
+  font-size: 24px;
+}
+
+
+
+
+.img-container h2{
+  font-size: 13px;
+  margin-left: 5%;
+  color: white;
 }
