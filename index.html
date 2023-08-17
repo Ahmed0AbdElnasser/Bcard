@@ -156,8 +156,6 @@
 
 
 
-
-
             <div class="icon-contacts">
                 <div class="icon-bar">
                     <a  style="transform: rotate(166deg);
@@ -200,12 +198,7 @@
 
 
 
-    <div class="main-box" onclick="toggleExpand()">
-        <i  class="fas fa-plus plusfull"></i>
-        <div class="child-box"  onclick="openLink('https://www.google.com')"><i class="fas fa-phone-alt"></i></div>
-        <div class="child-box" onclick="openLink('https://www.google.com')"><i class="fas fa-qrcode"></i></div>
-        <div class="child-box" onclick="openLink('https://www.qrcodechimp.com/user/services/openapi?cmd=downloadVcf&id=philipaziz')"><i class="fa-regular fa-square-plus"></i></div>
-      </div>
+
       </div>
 
     </div>
@@ -221,11 +214,35 @@
 
 
 
+<!-- big -->
+<button id="toggleButton"><i class="fa-solid fa-qrcode"></i></button>
+<div class="red-box" id="redBox">
+    <div id="qr_profile_section" style="padding: 40px 0;">
+        <div class="qrc_profile_inner_info_popup">
+                            <div class="qrc_profile_pic_popup" style="background-image: url('https://cdn0030.qrcodechimp.com/qr/PROD/6317af06d2a326cae90bddd6/fm/285370218_1447446052377169_6012810982862397799_n.png')"></div>
+                            <h2>Clinique Dentaire Rosemere</h2>
+                            <p>DR.</p>
+                            <br>
+                            <p class="qrc_profile_company">Philip Aziz</p>
+                        </div>
+        <div class="qrc_profile_qrcode_popup">
+            <img width="200" src="qr-code.png" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="qr_popup_button_container">
+            <a href="#" class="qrc_addtohomescreen qrc_btn_add_to_home_screen ">
+                        <div class="qrc_action_button_icon">
+                    <i class="fa-regular fa-images"></i>
+                </div>             
+                <div class="qrc_addtohomescreen_text">Add to Gallery</div>   
+            </a>
+        </div>
+  <span class="close-btn" id="closeBtn">&times;</span>
+</div>
 
 
-
-
-
+<button id="share"><i class="fa-regular fa-share-from-square"></i></button>
       
     </body>
 <script>
@@ -312,5 +329,37 @@ document.addEventListener("DOMContentLoaded", function() {
   container.classList.add("animated");
 });
 // hide s
+
+
+const toggleButton = document.getElementById('toggleButton');
+const redBox = document.getElementById('redBox');
+const closeBtn = document.getElementById('closeBtn');
+
+toggleButton.addEventListener('click', () => {
+  redBox.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  redBox.style.display = 'none';
+});
+
+
+        // كود JavaScript للزر
+        const addToHomeScreenButton = document.getElementById('share');
+
+        addToHomeScreenButton.addEventListener('click', () => {
+            if (window.navigator && window.navigator.share) {
+                // تقديم مشاركة نافذة إذا كان المستخدم يستخدم متصفحًا يدعمه
+                window.navigator.share({
+                    title: 'Your Website Title',
+                    url: window.location.href
+                });
+            } else if (window.addToHomescreen) {
+                // تقديم إضافة إلى الشاشة الرئيسية إذا كان المستخدم يستخدم متصفحًا يدعمه
+                window.share();
+            } else {
+                alert("Your browser doesn't support this feature.");
+            }
+        });
 </script>
 </html>
