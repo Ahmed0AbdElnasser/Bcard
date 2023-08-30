@@ -1,4 +1,17 @@
 /* ثوابت */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+/*===== VARIABLES CSS =====*/
+:root{
+  /*===== Colores =====*/
+  --first-color: #1A73E8;
+  --input-color: #80868B;
+  --border-color: #DADCE0;
+
+  /*===== Fuente y tipografia =====*/
+  --body-font: 'Roboto', sans-serif;
+  --normal-font-size: 1rem;
+  --small-font-size: .75rem;
+}
 *{
   font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-box-sizing: border-box;
@@ -169,7 +182,7 @@ body{
     z-index: 9999;
     margin-top: -1px;
     padding: 5%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding-bottom: 50px;
 }
 
@@ -672,7 +685,7 @@ button {
     cursor: pointer;
     position: fixed;
     left: 80px;
-    bottom: 10px;
+    bottom: 15px;
     /* background-color: #ffffff; */
     /* border: solid 2px #ffffff20; */
     z-index: 999999999;
@@ -691,4 +704,175 @@ button {
 
 button{
   border-radius: 9px;
+  bottom: 15px;
+}
+
+
+
+
+.rating {
+  display: inline-block;
+  font-size: 0;
+  direction: rtl; /* توجيه النص من اليمين لليسار */
+
+margin-left: 25%;
+}
+.rating input {
+  display: none;
+}
+
+.rating label {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 0 4px; /* تباعد بين النجوم */
+}
+
+.rating label:before {
+  content: "\2605";
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  right: 0; /* تمرير النص من اليمين */
+  color: #ccc;
+}
+
+.rating input:checked ~ label:before,
+.rating input:checked ~ label ~ label:before {
+  color: #0e4254; /* تغيير لون النجمة عند الضغط */
+}
+
+
+.RATEUS{
+  background-color: #009dff9e;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; 
+    z-index: 9999999;
+    height: max-content;
+    max-width: 97%;
+    position: relative;
+    left: 2%;
+    right: 15%;
+    border-radius: 5%;
+    z-index: 9999;
+    margin-top: -1px;
+    padding: 4%;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+.RATEUS a{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 30%;
+  color: #ffffff;
+  
+  text-shadow: 4px 3px 3px #0e4254;
+}
+.DATE{
+  background-color: #009dff9e;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; 
+  z-index: 9999999;
+  height: max-content;
+  max-width: 97%;
+  position: relative;
+  left: 2%;
+  right: 15%;
+  border-radius: 5%;
+  z-index: 9999;
+  margin-top: -1px;
+  padding: 4%;
+  padding-bottom: 25px;
+}
+
+
+
+
+.l-form{
+  display: flex;
+  justify-content: center;
+
+}
+.form{
+  width: 500px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+
+}
+.form__title{
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: white;
+}
+.form__div{
+  position: relative;
+  height: 48px;
+  margin-bottom: 1.5rem;
+}
+.form__input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: var(--normal-font-size);
+  border: 1px solid #0e4254;
+  border-radius: .5rem;
+  outline: none;
+  padding: 1rem;
+  background: none;
+  z-index: 1;
+}
+.form__label{
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  padding: 0 .25rem;
+  background-color: #0e4254;
+  color: rgb(255, 255, 255);
+  font-size: var(--normal-font-size);
+  transition: .3s;
+}
+.form__button{
+  display: block;
+  margin-left: auto;
+  padding: .75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: #0e4254;
+  color: #fff;
+  font-size: var(--normal-font-size);
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.form__button:hover{
+  box-shadow: 0 10px 36px rgba(0,0,0,.15);
+}
+
+/*Input focus move up label*/
+.form__input:focus + .form__label{
+  top: -.5rem;
+  left: .8rem;
+  color: white;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+/*Input focus sticky top label*/
+.form__input:not(:placeholder-shown).form__input:not(:focus)+ .form__label{
+  top: -.5rem;
+  left: .8rem;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  z-index: 10;
+}
+
+/*Input focus*/
+.form__input:focus{
+  border: 1.5px solid #0e4254;
 }
